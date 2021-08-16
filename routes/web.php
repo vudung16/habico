@@ -25,3 +25,6 @@ Route::get('news', function () {
 Route::get('products', function () {
     return view('users.pages.product');
 });
+Route::get('products-detail', function () {
+    return view('users.pages.productDetail');
+});
