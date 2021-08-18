@@ -4,6 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SlideController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PhotosController;
+use App\Http\Controllers\PhotogroupController;
+use App\Http\Controllers\MenusController;
+use App\Http\Controllers\SettingsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
