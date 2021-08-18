@@ -22,7 +22,6 @@ class Settings extends Migration
             $table->string('youtube');
             $table->string('mail');
             $table->string('zalo');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -11,6 +11,7 @@ use App\Http\Controllers\PhotosController;
 use App\Http\Controllers\PhotogroupController;
 use App\Http\Controllers\MenusController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\UploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -124,6 +125,14 @@ Route::group(['prefix' => 'admin', 'middleware' => [CheckLogin::class]], functio
         Route::get('edit/{id}', [SlideController::class, 'getEdit']);
         Route::post('edit/{id}', [SlideController::class, 'postEdit']);
         Route::delete('delete/{id}', [SlideController::class, 'postDelete']);
+    });
+    Route::group(['prefix' => 'upload'], function () {
+        Route::get('list', [UploadController::class, 'getList']);
+        Route::get('add', [UploadController::class, 'getAdd']);
+        Route::post('add', [UploadController::class, 'postAdd']);
+        Route::get('edit/{id}', [UploadController::class, 'getEdit']);
+        Route::post('edit/{id}', [UploadController::class, 'postEdit']);
+        Route::delete('delete/{id}', [UploadController::class, 'postDelete']);
     });
 
 });

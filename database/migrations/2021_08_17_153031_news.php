@@ -25,7 +25,6 @@ class News extends Migration
             $table->integer('status');
             $table->integer('featured');
             $table->integer('view_count')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }

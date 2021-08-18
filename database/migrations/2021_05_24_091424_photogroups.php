@@ -17,7 +17,6 @@ class Photogroups extends Migration
             $table->id();
             $table->string('name');
             $table->longText('content')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }

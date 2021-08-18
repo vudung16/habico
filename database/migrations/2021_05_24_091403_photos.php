@@ -19,7 +19,6 @@ class Photos extends Migration
             $table->string('name');
             $table->string('image');
             $table->longText('desc');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

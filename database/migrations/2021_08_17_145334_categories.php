@@ -20,7 +20,6 @@ class Categories extends Migration
             $table->string('slug');
             $table->string('image')->nullable();
             $table->string('status');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

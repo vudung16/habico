@@ -7,7 +7,6 @@ use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Slide;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
-use App\Http\Controllers\Controller;
 
 
 class SlideController extends Controller

@@ -17,7 +17,6 @@ class Slide extends Migration
             $table->id();
             $table->string('image');
             $table->string('active_status');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

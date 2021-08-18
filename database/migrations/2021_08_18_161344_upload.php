@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Role extends Migration
+class Upload extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('upload', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug');
+            $table->string('file');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('upload');
     }
 }

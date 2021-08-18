@@ -213,6 +213,29 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{url('admin/upload/list')}}" class="nav-link ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Upload
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url('admin/upload/list')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('admin/upload/add')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </nav>

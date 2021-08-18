@@ -21,7 +21,6 @@ class Menus extends Migration
             $table->string('menu_order');
             $table->integer('page_id');
             $table->integer('parent_id');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
