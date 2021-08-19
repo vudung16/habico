@@ -25,7 +25,7 @@
                                     ĐỢT 1
                                     CHƯƠNG TRÌNH
                                     KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
-                                <button><a href="">Chi tiết</a></button>
+                                <button><a href="{{url('newDetail')}}">Chi tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>Tin Thương Hiệu</h5>
@@ -86,7 +86,7 @@
                                     ĐỢT 1
                                     CHƯƠNG TRÌNH
                                     KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
-                                <button><a href="">Chi tiết</a></button>
+                                <button><a href="{{url('newDetail')}}">Chi tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>Tin Thương Hiệu</h5>
@@ -94,7 +94,7 @@
                                     ĐỢT 1
                                     CHƯƠNG TRÌNH
                                     KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
-                                <button><a href="">Chi tiết</a></button>
+                                <button><a href="{{url('newDetail')}}">Chi tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-image">
                                 <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
@@ -111,7 +111,7 @@
                         <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG ĐỢT 1
                             CHƯƠNG TRÌNH
                             KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
-                        <button><a href="">Chi tiết</a></button>
+                        <button><a href="{{url('newDetail')}}">Chi tiết</a></button>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-image">
                         <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
@@ -121,7 +121,7 @@
                         <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG ĐỢT 1
                             CHƯƠNG TRÌNH
                             KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
-                        <button><a href="">Chi tiết</a></button>
+                        <button><a href="{{url('newDetail')}}">Chi tiết</a></button>
                     </div>
                 </div>
             </div>
