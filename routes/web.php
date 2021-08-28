@@ -12,6 +12,7 @@ use App\Http\Controllers\PhotogroupController;
 use App\Http\Controllers\MenusController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -134,5 +135,12 @@ Route::group(['prefix' => 'admin', 'middleware' => [CheckLogin::class]], functio
         Route::post('edit/{id}', [UploadController::class, 'postEdit']);
         Route::delete('delete/{id}', [UploadController::class, 'postDelete']);
     });
-
+    Route::group(['prefix' => 'product'], function () {
+        Route::get('list', [ProductController::class, 'getList']);
+        Route::get('add', [ProductController::class, 'getAdd']);
+        Route::post('add', [ProductController::class, 'postAdd']);
+        Route::get('edit/{id}', [ProductController::class, 'getEdit']);
+        Route::post('edit/{id}', [ProductController::class, 'postEdit']);
+        Route::delete('delete/{id}', [ProductController::class, 'postDelete']);
+    });
 });
