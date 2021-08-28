@@ -92,6 +92,15 @@ header {
 
 
 /* ================  Home  ======================= */
+main .container .news .section-header{
+    margin: 50px 0px 30px 0px;
+}
+main .container .news .section-header .see-more h4{
+    text-align: right;
+}
+main .container .news .section-header .see-more h4 a{
+    text-decoration: none;
+}
 
 main .news .col-xl-3 {
     padding: 0px 0px;
@@ -205,7 +214,9 @@ main .product .product-title .nav li {
     width: 11%;
     z-index: 1;
 }
-
+main .product .product-title .nav li .active {
+    background-color: #ffffff;
+}
 main .product .product-title .nav li a img {
     width: 100%;
 }
@@ -389,3 +400,6 @@ footer .logo img {
     width: 20px;
     height: 20px;
 }
+
+
+/* =========page new======= */

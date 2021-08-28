@@ -8,6 +8,8 @@ use App\Models\Slide;
 use App\Models\Settings;
 use App\Models\Menus;
 use App\Models\News;
+use App\Models\Product;
+use App\Models\Categories;
 class PageController extends Controller
 {
     function __construct()
@@ -33,7 +35,9 @@ class PageController extends Controller
         $new3 = $news->shift();
         $new4 = $news->shift();
         $new5 = $news->shift();
-        return view('users.pages.homepage')->with(compact('new1','new2', 'new3', 'new4', 'new5'));
+
+        $products = Product::orderBy('id', 'desc')->take(9)->get();
+        return view('users.pages.homepage')->with(compact('new1','new2', 'new3', 'new4', 'new5', 'products'));
     }
 
     public function aboutus(){
@@ -41,7 +45,9 @@ class PageController extends Controller
     }
 
     public function news(){
-        return view('users.pages.new');
+        $categories = Categories::all();
+
+        return view('users.pages.new')->with(compact('categories'));
     }
 
     public function product(){
