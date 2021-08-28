@@ -23,10 +23,10 @@
                         <a class="nav-link nav-border-bottom" href="{{url('products')}}">Sản phẩm</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-border-bottom" href="Tuyển dụng">Tuyển dụng</a>
+                        <a class="nav-link nav-border-bottom" href="">Tuyển dụng</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link nav-border-bottom" href="" id="navbarDropdown" role="button"
+                        <a class="nav-link nav-border-bottom" href="{{url('shareholder')}}" id="navbarDropdown" role="button"
                             aria-expanded="false">
                             Thông tin cổ đông
                         </a>

@@ -36,6 +36,12 @@ Route::get('news', function () {
 Route::get('products', function () {
     return view('users.pages.product');
 });
+Route::get('shareholder', function () {
+    return view('users.pages.shareholder');
+});
+Route::get('newDetail', function () {
+    return view('users.pages.newDetail');
+});
 Route::get('products-detail', function () {
     return view('users.pages.productDetail');
 });
