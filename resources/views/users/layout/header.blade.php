@@ -32,12 +32,12 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li class="menu-2">
-                                <a class=" dropdown-item" href="">Vũ Dũng</a>
+                                <!-- <a class=" dropdown-item" href="">Vũ Dũng</a> -->
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-danger"><a href="{{url('contact-us')}}">CONTACT US</a></button>
+                    <a class="nav-link nav-border-bottom" href="{{url('contact-us')}}">Liên hệ</a>
                     </li>
                 </ul>
             </div>

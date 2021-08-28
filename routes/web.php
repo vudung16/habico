@@ -44,7 +44,9 @@ Route::get('newDetail', function () {
 Route::get('products-detail', function () {
     return view('users.pages.productDetail');
 });
-
+Route::get('contact-us', function () {
+    return view('users.pages.contact-us');
+});
 Route::get('admin', function() {
     return view('admin.layout.index');
 });
