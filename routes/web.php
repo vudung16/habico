@@ -13,6 +13,7 @@ use App\Http\Controllers\MenusController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,22 +24,11 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('users.pages.homepage');
-});
-Route::get('about-us', function () {
-    return view('users.pages.aboutus');
-});
-Route::get('news', function () {
-    return view('users.pages.new');
-});
-Route::get('products', function () {
-    return view('users.pages.product');
-});
-Route::get('shareholder', function () {
-    return view('users.pages.shareholder');
-});
+Route::get('/', [PageController::class, 'home']);
+Route::get('about-us', [PageController::class, 'aboutus']);
+Route::get('news', [PageController::class, 'news']);
+Route::get('products', [PageController::class, 'product']);
+Route::get('shareholder', [PageController::class, 'shareholder']);
 Route::get('newDetail', function () {
     return view('users.pages.newDetail');
 });

@@ -5,61 +5,55 @@
 <main>
     <div class="container">
         <div class="news">
-            <div class="section-header">
-                <h2>Tiêu điểm</h2>
-                <a href="">Xem thêm <i>icon</i></a>
+            <div class="row section-header">
+                <div class="col-sm-6">
+                    <h2>Tiêu Điểm</h2>
+                </div>
+                <div class="col-sm-6">
+                    <h4><a href="{{url('news')}}">Xem thêm <i>---></i></a></h4>
+                </div>
             </div>
             <div class="section-content">
                 <div class="row">
                     <div class="col-xl-6 content-left">
-                        <img src="{{asset('user_asset/img/new1.png')}}" alt="">
+                        <img src="{{asset('upload/news')}}/{{$new1['image']}}" alt="">
                     </div>
                     <div class="col-xl-6 col-md-12 content-right">
                         <div class="row">
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-image">
-                                <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
+                                <img src="{{asset('upload/news')}}/{{$new2['image']}}" alt="">
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>Tin Thương Hiệu</h5>
-                                <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG
-                                    ĐỢT 1
-                                    CHƯƠNG TRÌNH
-                                    KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
+                                <a class="title" href="">{{$new2['title']}}</a><br>
                                 <button><a href="">Chi tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>Tin Thương Hiệu</h5>
-                                <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG
-                                    ĐỢT 1
-                                    CHƯƠNG TRÌNH
-                                    KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
+                                <a class="title" href="">{{$new3['title']}}</a><br>
                                 <button><a href="">Chi tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-image">
-                                <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
+                                <img src="{{asset('upload/news')}}/{{$new3['image']}}" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-image">
-                        <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
+                        <img src="{{asset('upload/news')}}/{{$new4['image']}}" alt="">
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
                         <h5>Tin Thương Hiệu</h5>
-                        <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG ĐỢT 1
-                            CHƯƠNG TRÌNH
-                            KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
+                        <a class="title" href="">{{$new4['title']}}</a><br>
                         <button><a href="">Chi tiết</a></button>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-image">
-                        <img src="{{asset('user_asset/img/new2.jpg')}}" alt="">
+                        <img src="{{asset('upload/news')}}/{{$new5['image']}}" alt="">
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
                         <h5>Tin Thương Hiệu</h5>
-                        <a class="title" href="">BIA HÀ NỘI CÔNG BỐ DANH SÁCH KHÁCH HÀNG MAY MẮN TRÚNG THƯỞNG ĐỢT 1
-                            CHƯƠNG TRÌNH
-                            KHUYẾN MẠI “BỪNG SẮC HÈ CÙNG BIA HÀ NỘI”</a><br>
+                        <a class="title" href="">{{$new3['title']}}</a><br>
                         <button><a href="">Chi tiết</a></button>
                     </div>
                 </div>

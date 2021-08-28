@@ -1,7 +1,7 @@
 @extends('users.layout.index')
 @section('title','News')
 @section('content')
-
+@include('users.layout.slide')
 <main>
     <div class="container">
         <div class="news">

@@ -107,10 +107,12 @@ main .news .col-xl-6 {
 
 main .news .content-left img {
     width: 100%;
+    height: 700px;
 }
 
 main .news .content-right-image,
-main .news .content-right {
+main .news .content-right,
+main .news .content-left {
     overflow: hidden;
     position: relative;
 }
@@ -123,7 +125,6 @@ main .news .content-right .row {
     top: 0;
     width: 100%;
 }
-
 main .news .content-right-title {
     padding: 40px;
 }
