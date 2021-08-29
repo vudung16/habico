@@ -12,6 +12,8 @@ use App\Http\Controllers\PhotogroupController;
 use App\Http\Controllers\MenusController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,36 +24,30 @@ use App\Http\Controllers\UploadController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('users.pages.homepage');
-});
-Route::get('about-us', function () {
-    return view('users.pages.aboutus');
-});
-Route::get('news', function () {
-    return view('users.pages.new');
-});
-Route::get('products', function () {
-    return view('users.pages.product');
-});
-Route::get('shareholder', function () {
-    return view('users.pages.shareholder');
-});
+Route::get('/', [PageController::class, 'home']);
+Route::get('about-us', [PageController::class, 'aboutus']);
+Route::get('news', [PageController::class, 'news']);
+Route::get('products', [PageController::class, 'product']);
+Route::get('shareholder', [PageController::class, 'shareholder']);
 Route::get('newDetail', function () {
     return view('users.pages.newDetail');
 });
+
 Route::get('products-detail', function () {
     return view('users.pages.productDetail');
 });
 Route::get('contact-us', function () {
     return view('users.pages.contact-us');
 });
+
 Route::get('admin', function() {
     return view('admin.layout.index');
 });
 
+Route::get('category/{id}/{slug}.html', [PageController::class, 'category']);
+Route::get('new/{id}/{slug}.html', [PageController::class, 'newDetail']);
 
+Route::get('upload/{id}', [PageController::class, 'shareHolderDownload']);
 
 
 Route::get('admin', function () {
@@ -142,5 +138,12 @@ Route::group(['prefix' => 'admin', 'middleware' => [CheckLogin::class]], functio
         Route::post('edit/{id}', [UploadController::class, 'postEdit']);
         Route::delete('delete/{id}', [UploadController::class, 'postDelete']);
     });
-
+    Route::group(['prefix' => 'product'], function () {
+        Route::get('list', [ProductController::class, 'getList']);
+        Route::get('add', [ProductController::class, 'getAdd']);
+        Route::post('add', [ProductController::class, 'postAdd']);
+        Route::get('edit/{id}', [ProductController::class, 'getEdit']);
+        Route::post('edit/{id}', [ProductController::class, 'postEdit']);
+        Route::delete('delete/{id}', [ProductController::class, 'postDelete']);
+    });
 });
