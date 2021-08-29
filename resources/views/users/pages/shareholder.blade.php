@@ -9,40 +9,17 @@
     <div class="container">
         <div class="section-content">
             <div class="row">
-                <div class="">
-                    <h5 class = "text-center">Đại hội cổ đông</h5>
+                <div class="share-holder">
+                    <h1 class="text-center">Đại hội cổ đông</h1>
                     <table class="table table-hover">
                         <tbody>
+                            @foreach($shareholder as $sh)
                             <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="">Tải về</a></td>
+                                <td scope="row" class="nowrap_tb">{{$sh->name}}</td>
+                                <td>{{$sh->created_at}}</td>
+                                <td><a href="{{url('upload/'.$sh->id)}}">Tải về</a></td>
                             </tr>
-                            <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="">Tải về</a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="">Tải về</a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="">Tải về</a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="">Tải về</a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="nowrap_tb">Tài liệu ĐHĐCĐ thường niên năm 2020</td>
-                                <td>15/06/2020</td>
-                                <td><a href="" class = "">Tải về</a></td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -10,6 +10,7 @@ use App\Models\Menus;
 use App\Models\News;
 use App\Models\Product;
 use App\Models\Categories;
+use App\Models\Upload;
 class PageController extends Controller
 {
     function __construct()
@@ -44,17 +45,49 @@ class PageController extends Controller
         return view('users.pages.aboutus');
     }
 
+    public function category($id){
+        $slide = Slide::where('active_status', 0)->get();
+        $categories = News::where('categories_id', $id)->paginate(5);
+        $new1 = $categories->shift();
+        $new2 = $categories->shift();
+        $new3 = $categories->shift();
+        $new4 = $categories->shift();
+        $new5 = $categories->shift();
+
+        return view('users.pages.category')->with(compact('slide','categories','new1','new2','new3','new4','new5'));
+    }
+
     public function news(){
         $categories = Categories::all();
-
         return view('users.pages.new')->with(compact('categories'));
     }
 
-    public function product(){
-        return view('users.pages.product');
+    public function newDetail($id) {
+        $news = News::find($id);
+        $category = Categories::where('id', $news->categories_id)->first();
+        $next = News::where('id','>', $id)->orderBy('id','asc')->first();
+        $previous = News::where('id', '<', $id)->orderBy('id', 'desc')->first();
+        return view('users.pages.newDetail')->with(compact('news','next','previous','category'));
     }
 
-    public function shareholder(){
-        return view('users.pages.shareholder');
+    public function product(){
+        $product = Product::all();
+        return view('users.pages.product')->with(compact('product'));
+    }
+    public function productDetail($id){
+        $product = Product::findOrFail($id);
+        \Log::info($product);
+        return view('users.pages.productDetail')->with(compact('product'));
+    }
+    public function shareholder() {
+        $shareholder = Upload::paginate(20);
+
+        return view('users.pages.shareholder')->with(compact('shareholder'));
+    }
+
+    public function shareHolderDownload($id){
+        $shareholder = Upload::find($id);
+        $file_path = public_path('upload/uploads/'.$shareholder->file);
+        return response()->download($file_path);
     }
 }
