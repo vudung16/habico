@@ -19,15 +19,14 @@ class SettingsController extends Controller
 
     public function postEdit(Request $request) {
         $this->validate($request,[
-            'name'=>'required|min:3|max:50',
+            'name'=>'required|max:255',
             'email'=>'required',
             'zalo'=>'required|numeric',
             'facebook'=>'required',
             'youtube'=>'required',
         ],[
             'name.required' => 'The Name field is required.',
-            'name.min' => 'The Name must be at least 3 characters.',
-            'name.max' => 'The Name may not be greater than 7 characters.',
+            'name.max' => 'The Name may not be greater than 50 characters.',
             'email.required' => 'The Email field is required.',
             'zalo.required' => 'The Zalo field is required.',
             'facebook.required' => 'The Facebook field is required.',
