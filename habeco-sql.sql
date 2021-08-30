@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 30, 2021 lúc 06:17 AM
+-- Thời gian đã tạo: Th8 30, 2021 lúc 06:08 PM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 7.3.29
 
@@ -187,6 +187,15 @@ CREATE TABLE `photogroups` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `photogroups`
+--
+
+INSERT INTO `photogroups` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
+(1, 'Lịch Sử', '<p>Abc...xyz</p>', '2021-08-30 07:51:00', '2021-08-30 07:51:00'),
+(2, 'Thành Tựu', '<p>ádkjnafljn</p>', '2021-08-30 08:53:48', '2021-08-30 08:53:48'),
+(3, 'Thành viên', '<p>124142</p>', '2021-08-30 09:02:23', '2021-08-30 09:02:23');
+
 -- --------------------------------------------------------
 
 --
@@ -202,6 +211,20 @@ CREATE TABLE `photos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `photos`
+--
+
+INSERT INTO `photos` (`id`, `photogroups_id`, `name`, `image`, `desc`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Năm 2009', 'BT9s_Tong-quan-jpg.JPG', '<p><span style=\"color:rgb(32, 33, 36); font-family:consolas,lucida console,courier new,monospace; font-size:12px\">Cổ phần hóa, chuyển đổi mô hình hoạt động thành Công ty cổ phần. 50 năm xây dựng và phát triển</span></p>', '2021-08-30 07:52:15', '2021-08-30 07:52:15'),
+(2, 1, 'Năm 2007', 'S2wV_habeco-nangtamvithe.jpg', '<p><span style=\"color:rgb(32, 33, 36); font-family:consolas,lucida console,courier new,monospace; font-size:12px\">Ký kết hợp tác chiến lược với tập đoàn bia Carlsberg</span></p>', '2021-08-30 07:53:18', '2021-08-30 07:53:18'),
+(3, 1, 'Năm 2003', 'E2og_habeco.png', '<p><span style=\"color:rgb(32, 33, 36); font-family:consolas,lucida console,courier new,monospace; font-size:12px\">Thành lập Tổng Công ty Bia – Rượu – NGK Hà Nội theo Quyết định số 75/2003/QĐ-BCN ngày 6/5/2003</span></p>', '2021-08-30 07:54:26', '2021-08-30 07:55:06'),
+(4, 2, 'Thành tựu 1', 'f3RF_cup.jpg', '<p>ABCXYZ</p>', '2021-08-30 08:54:32', '2021-08-30 08:55:43'),
+(5, 2, 'Thành tựu 2', 'POcM_cup1.jpg', '<p>124124</p>', '2021-08-30 08:56:10', '2021-08-30 08:56:10'),
+(6, 2, 'Thành tựu 3', 'JDTb_cup-4183.png', '<p>12412rqwr</p>', '2021-08-30 08:56:28', '2021-08-30 08:56:28'),
+(7, 3, 'Thành viên 1', 'p03z_habeco.png', '<p>124312</p>', '2021-08-30 09:03:03', '2021-08-30 09:03:03'),
+(8, 3, 'Thành viên 2', 'KPGe_detail-icon.png', '<p>qửqwr</p>', '2021-08-30 09:03:23', '2021-08-30 09:03:23');
 
 -- --------------------------------------------------------
 
@@ -279,7 +302,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `logo`, `favicon`, `facebook`, `youtube`, `mail`, `zalo`, `created_at`, `updated_at`) VALUES
-(1, 'Habeco', 'logo.png', 'favicon.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'dungshinichi99@gmail.com', '0386132297', NULL, NULL),
+(1, 'Habeco', 'PC4C_logo.png', 'favicon.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'vuducdat1997@gmail.com', '0386132297', NULL, '2021-08-30 00:59:20'),
 (2, 'Habeco', 'logo.png', 'favicon.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'dungshinichi99@gmail.com', '0386132297', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -324,7 +347,8 @@ CREATE TABLE `upload` (
 
 INSERT INTO `upload` (`id`, `name`, `file`, `created_at`, `updated_at`) VALUES
 (1, 'Thông tin cổ đôngg', 'i0nn_Bai_2_01_Mo_so_phep_bien_doi_co_ban.pdf', '2021-08-18 09:43:00', '2021-08-18 09:47:36'),
-(2, 'Vũ Mạnh Dũng', 'DZHV_Nội dung công việc.docx', '2021-08-18 09:50:22', '2021-08-18 09:50:22');
+(2, 'Vũ Mạnh Dũng', 'DZHV_Nội dung công việc.docx', '2021-08-18 09:50:22', '2021-08-18 09:50:22'),
+(3, 'Vũ Đức Đạt', 'OMPM_Report_template.docx', '2021-08-30 00:30:04', '2021-08-30 00:30:04');
 
 -- --------------------------------------------------------
 
@@ -487,13 +511,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT cho bảng `photogroups`
 --
 ALTER TABLE `photogroups`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
@@ -523,7 +547,7 @@ ALTER TABLE `slide`
 -- AUTO_INCREMENT cho bảng `upload`
 --
 ALTER TABLE `upload`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `users`

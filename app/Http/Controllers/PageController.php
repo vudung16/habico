@@ -11,6 +11,8 @@ use App\Models\News;
 use App\Models\Product;
 use App\Models\Categories;
 use App\Models\Upload;
+use App\Models\Photos;
+use App\Models\Photogoups;
 use Mail;
 use Brian2694\Toastr\Facades\Toastr;
 class PageController extends Controller
@@ -44,7 +46,20 @@ class PageController extends Controller
     }
 
     public function aboutus(){
-        return view('users.pages.aboutus');
+        $photos = Photos::select('photos.*')
+        ->join('photogroups','photogroups.id','=','photos.photogroups_id')
+        ->where('photogroups.name','=','Lịch Sử')
+        ->get();
+        $photos2 = Photos::select('photos.*')
+        ->join('photogroups','photogroups.id','=','photos.photogroups_id')
+        ->where('photogroups.name','=','Thành tựu')
+        ->get();
+        $photos3 = Photos::select('photos.*')
+        ->join('photogroups','photogroups.id','=','photos.photogroups_id')
+        ->where('photogroups.name','=','Thành viên')
+        ->get();
+        
+        return view('users.pages.aboutus') -> with(compact('photos','photos2','photos3'));
     }
 
     public function category($id){
@@ -119,5 +134,7 @@ class PageController extends Controller
         Toastr::success('Admin sẽ phản hồi lại với bạn trong thời gian sớm nhất', 'Gửi thành công', ["positionClass" => "toast-top-center"]);
         return redirect('contact-us');
     }
+
+
 
 }

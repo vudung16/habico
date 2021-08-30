@@ -62,97 +62,24 @@
                             <div class="carousel-item active">
 
                                 <div class="row">
+                                @foreach($photos as $photo)
                                     <div class="col-md-4">
                                         <div class="card mb-2">
                                             <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                                alt="Card image cap">
+                                                src="{{asset('upload/photos/'.$photo->image)}}"
+                                                alt="Card image cap"
+                                                style="height: 300px;">
                                             <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2010</h4>
-                                                <p class="card-text">Cổ phần hóa, chuyển đổi mô hình hoạt động thành
-                                                    Công ty cổ phần. 50 năm xây dựng và phát triển</p>
+                                                <h4 class="card-title text-center">{{$photo->name}}</h4>
+                                                <p class="card-text" style=" font-size: 20px;">{!!$photo->desc!!}</p>
 
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-4 clearfix d-none d-md-block">
-                                        <div class="card mb-2">
-                                            <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                                alt="Card image cap">
-                                            <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2009</h4>
-                                                <p class="card-text">Ký kết hợp tác chiến lược với tập đoàn bia
-                                                    Carlsberg</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 clearfix d-none d-md-block">
-                                        <div class="card mb-2">
-                                            <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                                alt="Card image cap">
-                                            <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2003</h4>
-                                                <p class="card-text">Thành lập Tổng Công ty Bia – Rượu – NGK Hà Nội theo
-                                                    Quyết định số 75/2003/QĐ-BCN ngày 6/5/2003</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
 
                             </div>
                             <!--/.First slide-->
-
-                            <!--Second slide-->
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="card mb-2">
-                                            <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                                alt="Card image cap">
-                                            <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2010</h4>
-                                                <p class="card-text">Cổ phần hóa, chuyển đổi mô hình hoạt động thành
-                                                    Công ty cổ phần. 50 năm xây dựng và phát triển</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 clearfix d-none d-md-block">
-                                        <div class="card mb-2">
-                                            <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                                alt="Card image cap">
-                                            <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2009</h4>
-                                                <p class="card-text">Ký kết hợp tác chiến lược với tập đoàn bia
-                                                    Carlsberg</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 clearfix d-none d-md-block">
-                                        <div class="card mb-2">
-                                            <img class="card-img-top"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                                alt="Card image cap">
-                                            <div class="card-body" style="height: 200px;">
-                                                <h4 class="card-title text-center">Năm 2003</h4>
-                                                <p class="card-text">Thành lập Tổng Công ty Bia – Rượu – NGK Hà Nội
-                                                    theo Quyết định số 75/2003/QĐ-BCN ngày 6/5/2003</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <!--/.Second slide-->
 
                         </div>
                         <!--/.Slides-->
@@ -177,45 +104,19 @@
                         <div class="carousel-item active">
 
                             <div class="row">
+                            @foreach($photos2 as $photo)
                                 <div class="col-md-4">
                                     <div class="card mb-2">
                                         <img class="card-img-top"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                                            src="{{asset('upload/photos/'.$photo->image)}}"
                                             alt="Card image cap">
-                                        <div class="card-body" style="height: 200px;">
-                                            <h4 class="card-title text-center">Năm 2010</h4>
-                                            <p class="card-text">Cổ phần hóa, chuyển đổi mô hình hoạt động thành
-                                                Công ty cổ phần. 50 năm xây dựng và phát triển</p>
-
+                                        <div class="card-body" style="height: 50px;">
+                                            <h4 class="card-title text-center">{{$photo->name}}</h4>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <img class="card-img-top"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                            alt="Card image cap">
-                                        <div class="card-body" style="height: 200px;">
-                                            <h4 class="card-title text-center">Năm 2009</h4>
-                                            <p class="card-text">Ký kết hợp tác chiến lược với tập đoàn bia
-                                                Carlsberg</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <img class="card-img-top"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                            alt="Card image cap">
-                                        <div class="card-body" style="height: 200px;">
-                                            <h4 class="card-title text-center">Năm 2003</h4>
-                                            <p class="card-text">Thành lập Tổng Công ty Bia – Rượu – NGK Hà Nội
-                                                theo Quyết định số 75/2003/QĐ-BCN ngày 6/5/2003</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            @endforeach
+                                
                             </div>
 
                         </div>
@@ -241,35 +142,12 @@
                         <div class="row mx-auto my-auto">
                             <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
                                 <div class="carousel-inner w-100" role="listbox">
+                                @foreach($photos3 as $photo)
                                     <div class="carousel-item active">
                                         <img width="900" height="1200" class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
+                                            src="{{asset('upload/photos/'.$photo->image)}}">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block col-3 img-fluid"
-                                            src="{{asset('user_asset/img/habeco.png')}}">
-                                    </div>
-
+                                @endforeach  
                                 </div>
                                 <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
