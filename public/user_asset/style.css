@@ -172,8 +172,8 @@ main .product .section-bg {
     display: block;
     width: 100%;
     z-index: -1;
-    min-height: 360px;
-    max-height: 450px;
+    min-height: 460px;
+    max-height: 500px;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: 0 100%;
@@ -224,11 +224,12 @@ main .aboutus .aboutus-title h2::after {
 
 main .product .product-title ul {
     padding: 0px 40px;
+    margin-top: 30px;
 }
 
 main .product .product-title .nav li {
     position: relative;
-    width: 11%;
+    width: 9%;
     z-index: 1;
 }
 main .product .product-title .nav li .active {
@@ -295,25 +296,24 @@ main .product .product-title .nav .active::after {
 /* ================= Footer ======================== */
 
 footer {
+    border-top: 40px solid #154f28;
     margin-top: 100px;
-    background-color: #232E36;
-    color: #ffffff;
+    margin-bottom: 100px;
+    background-color: #f2f1ec;
+    padding: 25px 0px;
 }
-
+footer .name-info {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #154f28;
+}
 footer .mx-auto {
     margin-top: 50px;
 }
 
 footer a {
     text-decoration: none;
-}
-
-footer a:hover {
-    color: #08ff19 !important;
-}
-
-footer .footer-bottom {
-    border-top: 1px solid;
 }
 
 
