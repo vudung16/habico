@@ -441,7 +441,6 @@ main .section-content .share-holder h1{
     margin-bottom: 50px;
 }
 
-<<<<<<< HEAD
 /* ============= contact-us ============== */
 main .contact-us .text-center{
     margin-top: 20px;
@@ -506,7 +505,6 @@ main .contact-us .content-left .btn-submit:hover {
     justify-content: center;
     list-style: none;
 }
-=======
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;
@@ -540,5 +538,3 @@ main .contact-us .content-left .btn-submit:hover {
 .carousel-inner .carousel-item-start { 
   transform: translateX(0);
 }
-
->>>>>>> fdb7f54dc4cb38f0aed5446d0df96d0a0600b760
