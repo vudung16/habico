@@ -205,6 +205,23 @@ main .product .product-title h2:after {
     transform: translateX(-50%);
 }
 
+main .aboutus .aboutus-title h2 {
+    /* color: #ffffff; */
+    text-align: center;
+    padding-top: 40px;
+}
+
+main .aboutus .aboutus-title h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    border-bottom: 1px solid #d6a733;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 main .product .product-title ul {
     padding: 0px 40px;
 }
@@ -424,6 +441,7 @@ main .section-content .share-holder h1{
     margin-bottom: 50px;
 }
 
+<<<<<<< HEAD
 /* ============= contact-us ============== */
 main .contact-us .text-center{
     margin-top: 20px;
@@ -488,3 +506,39 @@ main .contact-us .content-left .btn-submit:hover {
     justify-content: center;
     list-style: none;
 }
+=======
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+>>>>>>> fdb7f54dc4cb38f0aed5446d0df96d0a0600b760
