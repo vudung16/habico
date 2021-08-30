@@ -14,15 +14,16 @@ class Menus extends Migration
     public function up()
     {
         Schema::create('menus', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('type');
             $table->string('name');
             $table->string('menu_url')->nullable();
             $table->string('menu_order');
-            $table->integer('page_id');
             $table->integer('parent_id');
             $table->timestamps();
         });
+        DB::statement('ALTER TABLE menus ADD COLUMN page_id INT(10) UNSIGNED NULL AFTER menu_order');
+        DB::statement('ALTER TABLE menus ADD CONSTRAINT menu_category FOREIGN KEY (page_id) REFERENCES categories(id)');
     }
 
     /**

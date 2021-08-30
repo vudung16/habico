@@ -11,6 +11,8 @@ use App\Models\News;
 use App\Models\Product;
 use App\Models\Categories;
 use App\Models\Upload;
+use Mail;
+use Brian2694\Toastr\Facades\Toastr;
 class PageController extends Controller
 {
     function __construct()
@@ -46,6 +48,7 @@ class PageController extends Controller
     }
 
     public function category($id){
+        $category = Categories::find($id);
         $slide = Slide::where('active_status', 0)->get();
         $categories = News::where('categories_id', $id)->paginate(5);
         $new1 = $categories->shift();
@@ -54,7 +57,7 @@ class PageController extends Controller
         $new4 = $categories->shift();
         $new5 = $categories->shift();
 
-        return view('users.pages.category')->with(compact('slide','categories','new1','new2','new3','new4','new5'));
+        return view('users.pages.category')->with(compact('category','slide','categories','new1','new2','new3','new4','new5'));
     }
 
     public function news(){
@@ -76,7 +79,6 @@ class PageController extends Controller
     }
     public function productDetail($id){
         $product = Product::findOrFail($id);
-        \Log::info($product);
         return view('users.pages.productDetail')->with(compact('product'));
     }
     public function shareholder() {
@@ -90,4 +92,32 @@ class PageController extends Controller
         $file_path = public_path('upload/uploads/'.$shareholder->file);
         return response()->download($file_path);
     }
+
+    public function contact(){
+        return view('users.pages.contact-us');
+    }
+
+    public function postContact(Request $request) {
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+            'g-recaptcha-response' => 'required',
+        ]);
+        \Mail::send('sendMail.contactus',[
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'msg' => $request->message
+        ], function($mail) use($request){
+            $setting_Mail = Settings::orderBy('name')->first();
+            $mail->from($request->email);
+            $mail->to($setting_Mail->mail, $request->name);
+            $mail->subject('Contact us');
+        });
+        Toastr::success('Admin sẽ phản hồi lại với bạn trong thời gian sớm nhất', 'Gửi thành công', ["positionClass" => "toast-top-center"]);
+        return redirect('contact-us');
+    }
+
 }

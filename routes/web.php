@@ -29,25 +29,18 @@ Route::get('about-us', [PageController::class, 'aboutus']);
 Route::get('news', [PageController::class, 'news']);
 Route::get('products', [PageController::class, 'product']);
 Route::get('shareholder', [PageController::class, 'shareholder']);
-Route::get('newDetail', function () {
-    return view('users.pages.newDetail');
-});
 
-Route::get('products-detail', function () {
-    return view('users.pages.productDetail');
-});
-Route::get('contact-us', function () {
-    return view('users.pages.contact-us');
-});
-
-Route::get('admin', function() {
-    return view('admin.layout.index');
-});
+Route::get('product-detail/{id}', [PageController::class, 'productDetail']);
+Route::get('contact-us', [PageController::class, 'contact']);
+Route::post('contact-us', [PageController::class, 'postContact']);
 
 Route::get('category/{id}/{slug}.html', [PageController::class, 'category']);
 Route::get('new/{id}/{slug}.html', [PageController::class, 'newDetail']);
 
 Route::get('upload/{id}', [PageController::class, 'shareHolderDownload']);
+
+
+
 
 
 Route::get('admin', function () {

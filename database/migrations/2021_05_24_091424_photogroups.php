@@ -14,7 +14,7 @@ class Photogroups extends Migration
     public function up()
     {
         Schema::create('photogroups', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->longText('content')->nullable();
             $table->timestamps();

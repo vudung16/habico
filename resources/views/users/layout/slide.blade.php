@@ -1,5 +1,5 @@
 <div id="slide">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide multi-item-carousel" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <?php $i=0; ?>
             @foreach($slide as $sl)
@@ -14,7 +14,7 @@
             @foreach($slide as $sl)
             <div @if($i==0) class="carousel-item active" @else class="carousel-item" @endif data-bs-interval="10000">
                 <?php $i++; ?>
-                <img src="upload/slide/{{ $sl -> image}}" class="d-block w-100" alt="">
+                <img src="{{asset('/upload/slide/'.$sl -> image)}}" class="d-block w-100" alt="">
             </div>
             @endforeach
 

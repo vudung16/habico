@@ -423,3 +423,68 @@ main .section-content .share-holder{
 main .section-content .share-holder h1{
     margin-bottom: 50px;
 }
+
+/* ============= contact-us ============== */
+main .contact-us .text-center{
+    margin-top: 20px;
+    font-weight: bold;
+}
+main .contact-us .content-left {
+    margin-top: 80px;
+}
+main .contact-us .content-right{
+    margin-top: 110px;
+}
+main .contact-us .content-left .form-group {
+    margin: 30px 0px;
+}
+
+main .contact-us .content-left .h3 {
+    margin: 0 auto;
+}
+
+main .contact-us .content-left input,
+main .contact-us .content-left textarea {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+main .contact-us .content-left input:focus {
+    border: 2px solid #81d742;
+}
+
+main .contact-us .content-left .btn-submit {
+    width: 100px;
+    background-color: #81d742;
+    color: #ffffff;
+}
+
+main .contact-us .content-left .btn-submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ==================Page new=============== */
+.page-news .container{
+    margin-top: 50px;
+}
+.page-news .article-info ul {
+    padding: 20px 0px 30px 0px;
+}
+
+.page-news .article-info ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.page-news .article-info ul li i::before {
+    color: blue;
+}
+
+.page-news .container .content button {
+    margin: 50px 0px 50px 0px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}

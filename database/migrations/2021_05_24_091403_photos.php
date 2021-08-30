@@ -14,13 +14,14 @@ class Photos extends Migration
     public function up()
     {
         Schema::create('photos', function (Blueprint $table) {
-            $table->id();
-            $table->integer('photogroups_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('image');
             $table->longText('desc');
             $table->timestamps();
         });
+        DB::statement('ALTER TABLE photos ADD COLUMN photogroups_id INT(10) UNSIGNED NULL AFTER id');
+        DB::statement('ALTER TABLE photos ADD CONSTRAINT photo_photogroups FOREIGN KEY (photogroups_id) REFERENCES photogroups(id)');
     }
 
     /**

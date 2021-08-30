@@ -48,7 +48,6 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Slug</th>
-                                        <th>Image</th>
                                         <th>Status</th>
                                         <th>Edit, Delete</th>
                                     </tr>
@@ -58,10 +57,6 @@
                                     <tr>
                                         <td>{{$categories->name}}</td>
                                         <td>{{$categories->slug}}</td>
-                                        <td>
-                                            <img width="100px" src="{{url('upload/categories')}}/{{$categories->image}}"
-                                                alt="">
-                                        </td>
                                         <td>@if($categories->status == 0)
                                             Show
                                             @else
@@ -92,7 +87,6 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Slug</th>
-                                        <th>Image</th>
                                         <th>Status</th>
                                         <th>Edit, Delete</th>
                                     </tr>

@@ -47,10 +47,6 @@ use App\Models\Menus;
                         @endif
                     </li>
                     @endforeach
-                    <li class="nav-item">
-                    <a class="nav-link nav-border-bottom" href="{{url('contact-us')}}">Liên hệ</a>
-
-                    </li>
                 </ul>
             </div>
         </div>

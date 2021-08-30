@@ -26,7 +26,6 @@ class CategoriesController extends Controller
     public function postAdd(Request $request){
         $this->validate($request,[
             'name'=>'required|min:5|max:50|unique:categories,name',
-            'image' => 'mimes:jpeg,jpg,png',
             'parent' => 'required',
             'status' => 'required',
         ],[
@@ -45,19 +44,6 @@ class CategoriesController extends Controller
         $categories->slug = (Str::slug($request->name));
         $categories->parent_id = $request->parent;
         $categories->status = $request->status;
-        
-        if($request->hasFile('image')){
-            $file = $request->file('image');
-            $filename = $file->getClientOriginalName();
-            $random = Str::random(4)."_".$filename;
-            while(file_exists("upload/categories".$random)){
-    			$random = Str::random(4)."_".$filename;
-    		}
-    		$file->move("upload/categories", $random);
-    		$categories->image = $random;
-        } else{
-            $categories->image = "";
-        }
         $categories->save();
         Toastr::success('Thêm thành công', 'Thành công', ["positionClass" => "toast-top-center"]);
         return response()->json();
@@ -76,7 +62,6 @@ class CategoriesController extends Controller
     public function postEdit(Request $request,$id){
         $validator = $request->validate([
             'name'=>'required|min:5|max:50',
-            'image' => 'mimes:jpeg,jpg,png',
             'parent' => 'required',
             'status' => 'required',
         ],[
@@ -93,20 +78,6 @@ class CategoriesController extends Controller
         $categories->slug = (Str::slug($request->name));
         $categories->parent_id = $request->parent;
         $categories->status = $request->status;
-        
-        if($request->hasFile('image')){
-            $file = $request->file('image');
-            $filename = $file->getClientOriginalName();
-            $random = Str::random(4)."_".$filename;
-            while(file_exists("upload/categories".$random)){
-    			$random = Str::random(4)."_".$filename;
-    		}
-    		$file->move("upload/categories", $random);
-            File::delete(public_path("upload/categories/".$categories->image));
-    		$categories->image = $random;
-        } else{
-            $categories->image = $categories->image;
-        }
         $categories->save();
         Toastr::success('Sửa thành công', 'Thành công', ["positionClass" => "toast-top-center"]);
         return response()->json();

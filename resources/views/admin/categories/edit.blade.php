@@ -38,7 +38,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" name="name" class="form-control" value="{{$categories->name_vn}}">
+                                <input type="text" name="name" class="form-control" value="{{$categories->name}}">
                             </div>
                             <div class="form-group">
                                 <label for="inputMenu">Parent Categories</label>
@@ -59,11 +59,6 @@
                                     <!-- <option value="0">Parent</option> -->
 
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputDescription">Image</label><br>
-                                <input type="file" name="image" id=""><br><br>
-                                <img width="100px" src="{{url('upload/categories')}}/{{$categories->image}}" alt="null">
                             </div>
                             <div class="form-group">
                                 <label for="inputStatus">Active status</label>

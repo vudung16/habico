@@ -14,9 +14,7 @@ class News extends Migration
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
-            $table->id();
-            $table->integer('categories_id');
-            $table->integer('user_id');
+            $table->increments('id');
             $table->longText('title');
             $table->longText('desc');
             $table->longText('details');
@@ -27,6 +25,12 @@ class News extends Migration
             $table->integer('view_count')->nullable();
             $table->timestamps();
         });
+
+        DB::statement('ALTER TABLE news ADD COLUMN categories_id INT(10) UNSIGNED NULL AFTER id');
+        DB::statement('ALTER TABLE news ADD COLUMN user_id INT(10) UNSIGNED NULL AFTER categories_id');
+
+        DB::statement('ALTER TABLE news ADD CONSTRAINT news_categories FOREIGN KEY (categories_id) REFERENCES categories(id)');
+        DB::statement('ALTER TABLE news ADD CONSTRAINT news_users FOREIGN KEY (user_id) REFERENCES users(id)');
     }
 
     /**

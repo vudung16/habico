@@ -50,10 +50,6 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="inputDescription">Image</label><br>
-                                <input type="file" name="image" id="">
-                            </div>
-                            <div class="form-group">
                                 <label for="inputStatus">Active status</label>
                                 <select id="inputStatus" name="status" class="form-control custom-select">
                                     <option selected disabled>Select one</option>

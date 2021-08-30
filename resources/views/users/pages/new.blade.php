@@ -36,14 +36,14 @@
                                         src="{{asset('upload/news')}}/{{$new2['image']}}" alt=""></a>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
-                                <h5>{{$new2->categories['name']}}</h5>
+                                <h5>{{$category->name}}</h5>
                                 <a class="title"
                                     href="{{url('new')}}/{{$new2['id']}}/{{$new2['slug']}}.html">{{$new2['title']}}</a><br>
                                 <button><a href="{{url('new')}}/{{$new2['id']}}/{{$new1['slug']}}.html">Chi
                                         tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
-                                <h5>{{$new3->categories['name']}}</h5>
+                                <h5>{{$category->name}}</h5>
                                 <a class="title"
                                     href="{{url('new')}}/{{$new3['id']}}/{{$new3['slug']}}.html">{{$new3['title']}}</a><br>
                                 <button><a href="{{url('new')}}/{{$new3['id']}}/{{$new3['slug']}}.html">Chi
@@ -62,7 +62,7 @@
                                 src="{{asset('upload/news')}}/{{$new4['image']}}" alt=""></a>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
-                        <h5>{{$new4->categories['name']}}</h5>
+                        <h5>{{$category->name}}</h5>
                         <a class="title"
                             href="{{url('new')}}/{{$new4['id']}}/{{$new4['slug']}}.html">{{$new4['title']}}</a><br>
                         <button><a href="{{url('new')}}/{{$new4['id']}}/{{$new4['slug']}}.html">Chi tiết</a></button>
@@ -72,7 +72,7 @@
                                 src="{{asset('upload/news')}}/{{$new5['image']}}" alt=""></a>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
-                        <h5>{{$new5->categories['name']}}</h5>
+                        <h5>{{$category->name}}</h5>
                         <a class="title"
                             href="{{url('new')}}/{{$new5['id']}}/{{$new5['slug']}}.html">{{$new3['title']}}</a><br>
                         <button><a href="{{url('new')}}/{{$new5['id']}}/{{$new5['slug']}}.html">Chi tiết</a></button>

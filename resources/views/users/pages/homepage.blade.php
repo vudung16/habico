@@ -16,45 +16,56 @@
             <div class="section-content">
                 <div class="row">
                     <div class="col-xl-6 content-left">
-                        <img src="{{asset('upload/news')}}/{{$new1['image']}}" alt="">
+                        <a href="{{url('new')}}/{{$new1['id']}}/{{$new1['slug']}}.html"><img
+                                src="{{asset('upload/news')}}/{{$new1['image']}}" alt=""></a>
                     </div>
                     <div class="col-xl-6 col-md-12 content-right">
                         <div class="row">
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-image">
-                                <img src="{{asset('upload/news')}}/{{$new2['image']}}" alt="">
+                                <a href="{{url('new')}}/{{$new2['id']}}/{{$new2['slug']}}.html"><img
+                                        src="{{asset('upload/news')}}/{{$new2['image']}}" alt=""></a>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>{{$new2->categories['name']}}</h5>
-                                <a class="title" href="">{{$new2['title']}}</a><br>
-                                <button><a href="">Chi tiết</a></button>
+                                <a class="title"
+                                    href="{{url('new')}}/{{$new2['id']}}/{{$new2['slug']}}.html">{{$new2['title']}}</a><br>
+                                <button><a href="{{url('new')}}/{{$new2['id']}}/{{$new1['slug']}}.html">Chi
+                                        tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-title">
                                 <h5>{{$new3->categories['name']}}</h5>
-                                <a class="title" href="">{{$new3['title']}}</a><br>
-                                <button><a href="">Chi tiết</a></button>
+                                <a class="title"
+                                    href="{{url('new')}}/{{$new3['id']}}/{{$new3['slug']}}.html">{{$new3['title']}}</a><br>
+                                <button><a href="{{url('new')}}/{{$new3['id']}}/{{$new3['slug']}}.html">Chi
+                                        tiết</a></button>
                             </div>
                             <div class="col-xl-6 col-md-6 col-sm-6 content-right-image">
-                                <img src="{{asset('upload/news')}}/{{$new3['image']}}" alt="">
+                                <a href="{{url('new')}}/{{$new3['id']}}/{{$new3['slug']}}.html"><img
+                                        src="{{asset('upload/news')}}/{{$new3['image']}}" alt=""></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-image">
-                        <img src="{{asset('upload/news')}}/{{$new4['image']}}" alt="">
+                        <a href="{{url('new')}}/{{$new4['id']}}/{{$new4['slug']}}.html"><img
+                                src="{{asset('upload/news')}}/{{$new4['image']}}" alt=""></a>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
                         <h5>{{$new4->categories['name']}}</h5>
-                        <a class="title" href="">{{$new4['title']}}</a><br>
-                        <button><a href="">Chi tiết</a></button>
+                        <a class="title"
+                            href="{{url('new')}}/{{$new4['id']}}/{{$new4['slug']}}.html">{{$new4['title']}}</a><br>
+                        <button><a href="{{url('new')}}/{{$new4['id']}}/{{$new4['slug']}}.html">Chi tiết</a></button>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-image">
-                        <img src="{{asset('upload/news')}}/{{$new5['image']}}" alt="">
+                        <a href="{{url('new')}}/{{$new5['id']}}/{{$new5['slug']}}.html"><img
+                                src="{{asset('upload/news')}}/{{$new5['image']}}" alt=""></a>
                     </div>
                     <div class="col-xl-3 col-md-6 col-sm-6 content-right-title">
                         <h5>{{$new5->categories['name']}}</h5>
-                        <a class="title" href="">{{$new3['title']}}</a><br>
-                        <button><a href="">Chi tiết</a></button>
+                        <a class="title"
+                            href="{{url('new')}}/{{$new5['id']}}/{{$new5['slug']}}.html">{{$new3['title']}}</a><br>
+                        <button><a href="{{url('new')}}/{{$new5['id']}}/{{$new5['slug']}}.html">Chi tiết</a></button>
                     </div>
                 </div>
             </div>
@@ -65,7 +76,7 @@
                 <h2>SẢN PHẨM</h2>
                 <!-- Tabs navs -->
                 <div class="nav-product">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                         <?php $i=0 ?>
                         @foreach($products as $product)
 
@@ -93,7 +104,7 @@
                                 <div class="col-md-6 content">
                                     <img src="{{asset('upload/product')}}/{{$product->logo}}" alt="">
                                     <p>{{$product->describe}}</p>
-                                    <button><a href="">Xem thêm</a></button>
+                                    <button><a href="{{url('product-detail/'.$product->id)}}">Xem thêm</a></button>
                                 </div>
                                 <div class="col-md-6 img">
                                     <img src="{{asset('upload/product')}}/{{$product->image}}" alt="">
