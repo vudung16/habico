@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 30, 2021 lúc 06:17 AM
+-- Thời gian đã tạo: Th8 30, 2021 lúc 05:43 PM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 7.3.29
 
@@ -279,8 +279,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `logo`, `favicon`, `facebook`, `youtube`, `mail`, `zalo`, `created_at`, `updated_at`) VALUES
-(1, 'Habeco', 'logo.png', 'favicon.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'dungshinichi99@gmail.com', '0386132297', NULL, NULL),
-(2, 'Habeco', 'logo.png', 'favicon.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'dungshinichi99@gmail.com', '0386132297', NULL, NULL);
+(1, 'TỔNG CÔNG TY CỔ PHẦN BIA - RƯỢU - NƯỚC GIẢI KHÁT HÀ NỘI', 'JM5X_Image 3.png', 'T2F3_favicon_deptuoi30.png', 'facebook.com/vumanhdung.dhtl', 'youtube.com', 'dungshinichi99@gmail.com', '0386132297', NULL, '2021-08-30 08:39:49');
 
 -- --------------------------------------------------------
 
